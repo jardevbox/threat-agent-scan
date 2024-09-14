@@ -36,6 +36,7 @@ runs:
     - '--eid=${{ inputs.eid }}'
     - '--oid=${{ inputs.oid }}'
     - '--branch=${{ inputs.branch }}'
+    - '--pr-num=${{ inputs.pr-num }}'
     - '--scm-auth-token=${{ inputs.scm-token }}'
     - '--progress'
     - '/github/workspace'
