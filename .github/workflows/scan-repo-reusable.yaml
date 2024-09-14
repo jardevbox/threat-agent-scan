@@ -44,7 +44,7 @@ jobs:
         with:
           eid: ${{ env.TRX_EID }}
           oid: ${{ env.TRX_OID }}
-          scpId: ${{ env.SCP_ID != '' && env.SCP_ID || 'UNDEFINED' }}
+          scpid: ${{ env.SCP_ID != '' && env.SCP_ID || 'UNDEFINED' }}
           server-url: ${{ inputs.trx-host }}
           scm-token: ${{ secrets.TOKEN }}
           api-token: ${{ secrets.THREATRIX_SERVER_API_KEY }}
