@@ -35,7 +35,7 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - name: Run scan with threat-agent
-        uses: threatrix/threat-agent-scan@master
+        uses: jardevbox/threat-agent-scan@master
         with:
           eid: ${{ env.TRX_EID }}
           oid: ${{ env.TRX_OID }}
