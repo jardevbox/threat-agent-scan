@@ -8,6 +8,9 @@ on:
       oid:
         required: false
         type: string
+      scpid:
+        required: false
+        type: string
       app-name:
         required: false
         type: string
@@ -25,6 +28,8 @@ on:
         required: false
       THREATRIX_OID:
         required: false
+      THREATRIX_SCP_ID:
+        required: false
 jobs:
   scan-repository:
     name: Scan repository
@@ -39,6 +44,7 @@ jobs:
         with:
           eid: ${{ env.TRX_EID }}
           oid: ${{ env.TRX_OID }}
+          scpId: ${{ env.SCP_ID != '' && env.SCP_ID || 'UNDEFINED' }}
           server-url: ${{ inputs.trx-host }}
           scm-token: ${{ secrets.TOKEN }}
           api-token: ${{ secrets.THREATRIX_SERVER_API_KEY }}
@@ -48,4 +54,5 @@ jobs:
     env:
       TRX_EID: ${{ inputs.eid != '' && inputs.eid || secrets.THREATRIX_EID }}
       TRX_OID: ${{ inputs.oid != '' && inputs.oid || secrets.THREATRIX_OID }}
+      SCP_ID: ${{ inputs.scpid != '' && inputs.scpid || secrets.THREATRIX_SCP_ID }}
 
