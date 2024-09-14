@@ -23,6 +23,9 @@ inputs:
   branch:
     description: 'Current branch'
     required: true
+  pr-num:
+    description: 'Pull Request Number'
+    required: false
 runs:
   using: 'docker'
   image: 'docker://threatrix/threat-agent:latest'
