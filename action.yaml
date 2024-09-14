@@ -25,7 +25,7 @@ inputs:
     required: true
   pr-num:
     description: 'Pull Request Number'
-    required: false
+    required: true
 runs:
   using: 'docker'
   image: 'docker://threatrix/threat-agent:latest'
